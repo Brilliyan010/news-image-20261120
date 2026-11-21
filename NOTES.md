@@ -1,5 +1,83 @@
 # news-image-20261120 — "Sum up 20 November's world news in one image"
 
+## FULL-DAY REBUILD — 21 Nov 2026 ~10:30 WIB, BANK ONLY, NOT SUBMITTED
+Rebuilt after 20 Nov 2026 ended everywhere, from the whole day's news
+(all timezones) — NOT the 35-story partial-day safety entry below.
+38 verified stories: 3 in the lead band + 35 grouped in 8 sections
+(Europe 6, Middle East 5, Asia-Pacific 6, Americas 5, Africa 3,
+Business & Tech 4, Science & Disasters 4, Sport & Culture 2).
+main.py rewritten fresh in this session (new layout: compact masthead,
+"The Day in Three" lead band, flowing mixed-style story paragraphs
+with bold lead-ins, red section headers with gold rules; auto-fit
+loop picks the largest story font that fits — 11pt here).
+BANK ONLY — not submitted; submit is handled separately.
+Deadline submit: 22 Nov 2026 07:00 WIB.
+
+## Rebuild verification (21 Nov 2026)
+- main.py (Python 3 stdlib + PIL only, no network, no randomness)
+  ran twice into fresh output dirs: BYTE-IDENTICAL outputs.
+- sha256 entry.png: 4f73a464deb8670e0c7c12aef9484b6203a110562fc0fb331348f0a647ed74e8
+- entry.png: 207,983 bytes (limit 1 MiB), PNG valid, 1024x1024 RGB.
+- Viewed at full size: date, lead band, all 8 sections and the footer
+  fully visible; no overlapping text, no cut-off words. First render
+  overflowed (sections ran past the footer); fixed by replacing the
+  two-line headline/detail layout with flowing mixed-style paragraphs
+  and re-measuring heights with the source suffix included.
+- Viewed at ~300px: masthead, lead band, section structure and story
+  blocks clearly readable; body text small at that scale, as expected
+  for a 38-story front page (same density as the news-image-01 winner).
+- Story list below (38) replaces the partial-day 35 for this version;
+  every story was verified against 20 Nov 2026 reporting before use.
+  One correction during research: Italy's €805m Meta fine was reported
+  14 Nov, NOT 20 Nov — it is NOT in this entry.
+
+## Story list (38) — full day, with sources
+Lead band: Russian missiles land in Poland, Tusk calls it a deliberate
+provocation, NATO's Rutte: "grave violation" (AP); S&P 500 −3.7% to
+6,910 into correction, Nasdaq −5.3% negative for 2026, Nikkei −5.06%
+(AP); Trump, Xi & Putin joint declaration in Shenzhen — nuclear war
+"must never be fought", no arms deal (Reuters).
+Europe: Russia's largest attack on Ukraine — 400+ drones, 110 missiles,
+8 killed, Kyiv bridges hit (AP); Coalition of the Willing in Berlin,
+Merz rejects a "new Yalta" (Reuters); EU–UK summit, food trade/carbon/
+youth mobility (Council of the EU); Denmark approves Greenland–US deal
+(AP); Estonia to shut Russia border crossings after sabotage (reports);
+Italy cost-of-living strike (reports).
+Middle East: Houthi missile damages Riyadh's PIF Tower, Saudi intercepts
+more missiles/drones (Sky News); coalition hits Houthi sites in Sanaa
+(reports); Iraqi forces enter Jurf al-Sakhar in Kataib Hezbollah deal
+(Reuters); Israeli strikes in Gaza, tanks cross the "yellow line" (BBC);
+Pentagon: US Iran campaign cost $48.3bn (DoD).
+Asia-Pacific: ICJ — Myanmar committed genocide against the Rohingya,
+reparations ordered (ICJ); Cyclone Akvan landfall near Gopalpur,
+70–80 km/h, 209 mm rain in Patrapur (IMD); Xi: US must do "right thing"
+on Taiwan (Reuters); Taiwan flags 2,700 China-linked accounts (reports);
+South Korea's first cholera case in a decade (reports); violence flares
+in Bangladesh ahead of Hasina's return (reports).
+Americas: Palisades Fire jury convicts Jonathan Rinderknecht (AP);
+$7.25bn Bayer Roundup settlement approved (reports); Haiti police kill
+34 gang suspects in Martissant raid (Reuters); Colombia tax protests +
+Lula shields Raoni's Amazon land (reports); Bukele moves toward a third
+term (reports).
+Africa: Somalia expels UAE ambassador within 72 hours (reports); Sudan
+gold-mine drone strike kills 10 in South Kordofan (Radio Dabanga);
+Nigeria funeral boat capsizes in Bayelsa, migrant boat sinks off Senegal
+(reports).
+Business & Tech: Anthropic −9.1% a day after record $81.3bn IPO (AP);
+Nvidia ~−14%, California AG subpoenas Nvidia over China chips (AP);
+US approved ~900,000 AI chips for China in six months (reports);
+Taiwan Taiex −6.2%, worst week since 1990 (Morningstar).
+Science & Disasters: BepiColombo reaches Mercury after 8 years, orbit
+insertion due 21 Nov (ESA); magnitude 6.7 quake in central Peru
+(reports); US loses measles elimination status (reports); COP31 talks
+in Turkey split on fossil fuels (reports).
+Sport & Culture: GTA VI tops $2bn in launch sales (industry reports);
+Fiona the hippo dies at Cincinnati Zoo after swallowing a hat
+(Cincinnati Zoo).
+Sources for the rebuild: AP, Reuters, BBC, Sky News, IMD, ICJ, ESA,
+Morningstar, Radio Dabanga, Council of the EU, Open Chronicle
+(20 Nov brief), One Turn (20 Nov digest).
+
 ## SAFETY ENTRY — partial day, BANK ONLY, NOT SUBMITTED
 Built 20 Nov 2026 ~00:24–00:30 UTC (07:24–07:30 WIB), from the news
 available at that hour: the overnight US cycle (19 Nov evening US =
@@ -138,7 +216,7 @@ first for any craft (NASA/Reuters, 19 Nov); engine trouble forces
 Japan's Hayabusa2 to scrap its asteroid landing plan (Space,
 20 Nov).
 
-## Validation
+## Validation (safety entry — SUPERSEDED by the 21 Nov full-day rebuild above)
 - main.py (Python 3 stdlib + PIL only, no network) draws entry.png
   and writes it to $MAKEFUN_OUTPUT_DIR or /output. Auto-fit loop
   picks the largest story font size that fits the page.
@@ -153,6 +231,9 @@ Japan's Hayabusa2 to scrap its asteroid landing plan (Space,
   (RULES.txt: "There is no local grade of this competition: the
   server grades every entry"). Kit CLI verified to support
   --muse-usage (kit level 3).
+- The rebuild's own verification (new sha256, byte size, 2-run
+  byte-identical check, full-size + 300px legibility) is in the
+  "Rebuild verification" section at the top of this file.
 
 ## Build notes
 - Repo created fresh after the competition opened (2026-11-20T00:00:00Z);
